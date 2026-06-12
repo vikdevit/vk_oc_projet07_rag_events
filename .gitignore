@@ -1,19 +1,21 @@
+# Environnements
 env/
 
+# variables d'environnement
 .env
 
+# Python cache
 __pycache__/
-
 .pytest_cache/
-
 .ipynb_checkpoints/
 
+# Data / index
 vectorstore/faiss_index/
-
 data/raw/
-
 data/processed/
 
+# Logs / fichiers binaires
 *.pkl
-
 *.log
+
+
