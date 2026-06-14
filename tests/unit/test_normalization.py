@@ -1,4 +1,4 @@
-from src.ingestion.fetch_openagenda_v19 import normalize
+from src.ingestion.fetch_openagenda_v20 import normalize
 
 
 def test_normalize_event():

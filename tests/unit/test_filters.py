@@ -1,4 +1,4 @@
-from src.ingestion.fetch_openagenda_v19 import is_relevant_agenda
+from src.ingestion.fetch_openagenda_v20 import is_relevant_agenda
 
 
 def test_is_relevant_agenda_true():

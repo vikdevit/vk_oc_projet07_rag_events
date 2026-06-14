@@ -1,6 +1,6 @@
 import pytest
 
-from src.ingestion.fetch_openagenda_v19 import (
+from src.ingestion.fetch_openagenda_v20 import (
     fetch_agendas,
     fetch_events,
 )
