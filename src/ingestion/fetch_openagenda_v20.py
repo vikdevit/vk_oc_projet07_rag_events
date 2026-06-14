@@ -133,6 +133,22 @@ def extract_date(event):
 
     return None
 
+# Extraction URL
+def extract_url(event):
+
+    links = event.get("links")
+
+    url = None
+
+    if isinstance(links, dict):
+        url = links.get("self")
+
+    return (
+        url
+        or event.get("canonicalUrl")
+        or event.get("canonicalurl")
+        or (event.get("canonical") or {}).get("url")
+    )
 
 # =========================
 # NORMALIZATION (FIX TESTS)
@@ -172,12 +188,14 @@ def normalize(event):
         "keywords": event.get("keywords") or [],
 
         "start_date": extract_date(event),
+        
+        "url": extract_url(event)
 
-        "url": (
-            event.get("canonicalurl")
-            or event.get("canonicalUrl")
-            or event.get("url")
-        )
+        #"url": (
+        #    event.get("canonicalurl")
+        #    or event.get("canonicalUrl")
+        #    or event.get("url")
+        #)
     }
 
 
@@ -266,7 +284,9 @@ def run():
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(filtered, f, ensure_ascii=False, indent=2)
-
+    
+    print(all_events[0].keys())
+    
     print("Saved ->", OUTPUT_FILE)
 
 
