@@ -12,7 +12,7 @@ API_KEY = "oa_pk_SMOBRlCiEhQcgohvLtbvuakEtxkoopLotSpzTWBIHsboNXMSSLbDdmydSvGcRFA
 AGENDAS_URL = "https://api.openagenda.com/v2/agendas"
 EVENTS_URL = "https://api.openagenda.com/v2/agendas/{uid}/events"
 
-OUTPUT_FILE = Path("data/raw/ingestion_normandie_events.json")
+OUTPUT_FILE = Path("data/raw/ingestion_events.json")
 
 LIMIT = 100
 
