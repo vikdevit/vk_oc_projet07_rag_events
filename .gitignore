@@ -17,3 +17,4 @@ data/processed/
 *.pkl
 
 *.log
+.coverage
