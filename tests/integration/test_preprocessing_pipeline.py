@@ -13,7 +13,7 @@ def test_preprocessing_pipeline():
 
         "data/processed/documents.json",
 
-        "data/processed/chunks.json"
+        "data/processed/semantic_chunks.json"
 
     ]
 
@@ -54,8 +54,10 @@ def test_preprocessing_pipeline():
 
     assert "metadata" in docs[0]
 
-
     assert "chunk_id" in chunks[0]
 
+    assert "text" in chunks[0]
 
-    assert len(chunks[0]["page_content"]) <= 500
+    assert "metadata" in chunks[0]
+
+    assert len(chunks[0]["text"]) < 2000

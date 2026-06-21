@@ -1,4 +1,4 @@
-from src.preprocessing.document_builder import (
+from src.preprocessing.document_builder_v2 import (
     build_content,
     build_metadata
 )

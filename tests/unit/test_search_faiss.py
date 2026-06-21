@@ -7,11 +7,11 @@ import numpy as np
 
 
 INDEX_FILE = Path(
-    "data/vectorstore/events.index"
+    "data/vectorstore/semantic_events.index"
 )
 
 EMBED_FILE = Path(
-    "data/processed/embeddings.json"
+    "data/processed/semantic_embeddings.json"
 )
 
 
