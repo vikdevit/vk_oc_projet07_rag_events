@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "activité enfant à Paris",
+    "answer": "1. **Atelier jeux enfants à partir de 2 mois**\n   - Catégorie : famille\n   - Ville : Paris\n   - Date : 17 mars 2026 à 09h30\n   - Description : Atelier jeux enfants à partir de 2 mois\n\n2. **Atelier éveil et jeux enfants à partir de 3 mois**\n   - Catégorie : loisir\n   - Ville : Paris\n   - Date : 18 mars 2026 à 15h00\n   - Description : Atelier éveil et jeux enfants à partir de 3 mois\n\n3. **lieu accueil enfants/parents**\n   - Catégorie : famille\n   - Ville : Paris\n   - Date : 19 mars 2026 à 14h30\n   - Description : lieu accueil enfants/parents",
+    "returncode": 0
+  },
+  {
+    "id": 2,
+    "question": "atelier parent enfant dans les Hauts-de-Seine",
+    "answer": "1. **Accueil Libre Enfants Parents JEUDI 12 Mars**\n   - **Catégorie** : famille\n   - **Ville** : Garches\n   - **Date** : 2026-03-12\n   - **Description** : Venez partager un temps avec votre enfant et d'autres familles, encadrées par 2 professionnelles au Relais AGLAE. Entrée libre, l'après-midi entre 13h30 et 17h30, bâtiment Bourgogne.\n\n*Je ne sais pas.* (Aucun autre événement ne correspond à un atelier parent-enfant dans les Hauts-de-Seine.)",
+    "returncode": 0
+  },
+  {
+    "id": 3,
+    "question": "activité petite enfance en Île-de-France",
+    "answer": "1. **Atelier Premier Pas**\n   - **Catégorie** : famille\n   - **Ville** : Verrières-le-Buisson\n   - **Date** : 18 mars 2026\n   - **Description** : Atelier Parents / Enfants autour des activités de la petite enfance\n\n2. **atelier parents enfants pro**\n   - **Catégorie** : famille\n   - **Ville** : Paris\n   - **Date** : 16 mars 2026\n   - **Description** : la semaine de la petite enfance\n\n3. **Journée de la Petite Enfance à la Médiathèque G. Apollinaire 2026**\n   - **Catégorie** : culture\n   - **Ville** : Pontoise\n   - **Date** : 14 mars 2026\n   - **Description** : Accueil des familles le samedi 14 mars de 10h à 12h avec des moments ludiques, le personnel crèche et médiathèques en binôme\n\n4. **Atelier éveil et jeux enfants de 0 à 3 ans**\n   - **Catégorie** : loisir\n   - **Ville** : Paris\n   - **Date** : 19 mars 2026\n   - **Description** : Atelier éveil et jeux enfants de 0 à 3 ans\n\n5. **Atelier jeux enfants à partir de 2 mois**\n   - **Catégorie** : famille\n   - **Ville** : Paris\n   - **Date** : 17 mars 2026\n   - **Description** : Atelier jeux enfants à partir de 2 mois",
+    "returncode": 0
+  },
+  {
+    "id": 4,
+    "question": "sortie famille près de Versailles",
+    "answer": "1. **Titre :** Événénement famille - Fêtez l'art à Versailles - Château de Versailles\n   **Catégorie :** loisir\n   **Ville :** Versailles\n   **Date :** 21 mars 2026\n   **Description :** Le samedi 21 mars, à l’occasion de la Semaine nationale de la Petite Enfance, le château invite les tout-petits, accompagnés de leur famille, à une première découverte des œuvres du musée.\n\n2. **Titre :** Visite commentée par les propriétaires d'un château privé et habité en famille\n   **Catégorie :** patrimoine\n   **Ville :** Médan\n   **Date :** 27 juin 2026\n   **Description :** Visite commentée d'un château privé et habité en famille.",
+    "returncode": 0
+  },
+  {
+    "id": 5,
+    "question": "événement famille à Saint-Denis",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 6,
+    "question": "événement culturel à Paris",
+    "answer": "1. **Visites du jardin partagé de la Butte Bergeyre**\n   - **Catégorie** : culture\n   - **Ville** : Paris\n   - **Date** : 28 juin 2026 à 11h00\n   - **Description** : Visite thématiques au choix\n\n2. **Accueil autour du livre**\n   - **Catégorie** : culture\n   - **Ville** : Paris\n   - **Date** : 20 mars 2026 à 10h30\n   - **Description** : Accueil autour du livre",
+    "returncode": 0
+  },
+  {
+    "id": 7,
+    "question": "spectacle ou activité culturelle en Seine-Saint-Denis",
+    "answer": "1. **Titre :** Ce Jour\n   **Catégorie :** Culture\n   **Ville :** Montreuil\n   **Date :** 2026-07-03\n   **Description :** Cirque / trampoline – Tout public à partir de 3 ans",
+    "returncode": 0
+  },
+  {
+    "id": 8,
+    "question": "exposition à Paris",
+    "answer": "1. **Exposition photographique : Châteaux, villas et folies. Villégiature en Île-de-France**\n   - **Catégorie** : culture\n   - **Ville** : Saint-Cloud\n   - **Date** : 27 juin 2026\n   - **Description** : Découvrez cette exposition originale\n\n2. **Expositions photographiques – Ru Gobêtue & Archives du musée de l'Histoire vivante**\n   - **Catégorie** : patrimoine\n   - **Ville** : Montreuil\n   - **Date** : 28 juin 2026\n   - **Description** : 2 expositions photographiques au cœur des Murs à Pêches",
+    "returncode": 0
+  },
+  {
+    "id": 9,
+    "question": "activité artistique dans le Val-de-Marne",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 10,
+    "question": "événement musique ou culture en Île-de-France",
+    "answer": "1. **Titre :** Concert : Fågelle\n   **Catégorie :** culture\n   **Ville :** Paris\n   **Date :** 21 juin 2026 à 19h30\n   **Description :** Issue de la scène expérimentale nordique, Fågelle incarne une collision brute entre lyrisme et déchaînement sonore. Sa musique mêle passages folkloriques, murs de son orchestraux, perturbations et...\n\n2. **Titre :** Voyage au coeur des Touaregs par l’association au fil des cultures\n   **Catégorie :** culture\n   **Ville :** Courbevoie\n   **Date :** 11 juillet 2026 à 18h00\n   **Description :** Concert\n\n3. **Titre :** Rêveries, par Sandrine Kao\n   **Catégorie :** culture\n   **Ville :** Saint-Cyr-sur-Morin\n   **Date :** 5 juillet 2026 à 15h00\n   **Description :** Lecture musicale\n\n4. **Titre :** Comme à la maison\n   **Catégorie :** culture\n   **Ville :** Courbevoie\n   **Date :** 5 juillet 2026 à 16h30\n   **Description :** Concert Folk\n\n5. **Titre :** Les voix humaines – Les Samedis musicaux chez Jean Cocteau\n   **Catégorie :** culture\n   **Ville :** Milly-la-Forêt\n   **Date :** 29 août 2026 à 18h00\n   **Description :** Chœur Les Discours",
+    "returncode": 0
+  },
+  {
+    "id": 11,
+    "question": "visite patrimoine à Paris",
+    "answer": "1.\n**Titre** : Visite guidée du parc de la Cité internationale\n**Catégorie** : loisir\n**Ville** : Paris\n**Date** : 27 juin 2026 à 14h00\n**Description** : À l’occasion de la 10e édition des Jardins ouverts en Île-de-France, le Centre du patrimoine vous propose une visite guidée consacrée à la découverte du parc de la Cité internationale.",
+    "returncode": 0
+  },
+  {
+    "id": 12,
+    "question": "découverte monument historique en Île-de-France",
+    "answer": "1. **Titre** : Conférence historique sur les jardins de Port-Royal des Champs\n   **Catégorie** : patrimoine\n   **Ville** : Magny-les-Hameaux\n   **Date** : 27 juin 2026\n   **Description** : Conférence historique\n\n2. **Titre** : Démonstration de taille des vergers historiques\n   **Catégorie** : patrimoine\n   **Ville** : Magny-les-Hameaux\n   **Date** : 27 juin 2026\n   **Description** : Démonstration de taille des vergers historiques du site des Granges",
+    "returncode": 0
+  },
+  {
+    "id": 13,
+    "question": "activité patrimoine dans les Yvelines",
+    "answer": "1. **Titre** : Démonstration de taille des vergers historiques\n   **Catégorie** : patrimoine\n   **Ville** : Magny-les-Hameaux\n   **Date** : 27 juin 2026\n   **Description** : Démonstration de taille des vergers historiques du site des Granges\n\n*Je ne sais pas.*",
+    "returncode": 0
+  },
+  {
+    "id": 14,
+    "question": "visite culturelle historique près de Versailles",
+    "answer": "1. **Titre :** Semaine événement au Château de Versailles\n   **Catégorie :** patrimoine\n   **Ville :** Versailles\n   **Date :** 17 mars 2026\n   **Description :** Toute la semaine, profitez d'une programmation de visites dédiées aux tout-petits visiteurs et à leur co-éducateurs.",
+    "returncode": 0
+  },
+  {
+    "id": 15,
+    "question": "événement autour du patrimoine en Essonne",
+    "answer": "1. **Titre :** Escapade nature et patrimoine\n   **Catégorie :** culture\n   **Ville :** Le Mérévillois\n   **Date :** 8 août 2026 à 14h00\n   **Description :** Au cours de cette visite à deux voix, un garde animateur du Conservatoire des Espaces naturels sensibles et une médiatrice culturelle du Domaine partagent leurs savoirs sur ce lieu historique unique.",
+    "returncode": 0
+  },
+  {
+    "id": 16,
+    "question": "activité sportive en famille",
+    "answer": "1. **Titre :** P'tits sportifs: Équilibre en action!\n   **Catégorie :** loisir\n   **Ville :** Attainville\n   **Date :** 2026-03-14\n   **Description :** Atelier parent/enfant pour les 2-6 ans: mini parcours et jeux d'équilibre",
+    "returncode": 0
+  },
+  {
+    "id": 17,
+    "question": "loisir sportif à Paris",
+    "answer": "1. **Titre :** parcours d'équilibre\n   **Catégorie :** loisir\n   **Ville :** Paris\n   **Date :** 2026-03-16\n   **Description :** Les enfants vont passer le parcours moteur pour appréhender l'équilibre",
+    "returncode": 0
+  },
+  {
+    "id": 18,
+    "question": "activité de plein air dans les Hauts-de-Seine",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 19,
+    "question": "atelier loisir pour enfants en Île-de-France",
+    "answer": "1. **Atelier éveil et jeux enfants de 0 à 3 ans**\n   - **Catégorie** : loisir\n   - **Ville** : Paris\n   - **Date** : 19 mars 2026 à 10h00\n   - **Description** : Atelier éveil et jeux enfants de 0 à 3 ans\n\n2. **Atelier créatif pour enfants**\n   - **Catégorie** : famille\n   - **Ville** : Mantes-la-Ville\n   - **Date** : 18 mars 2026 à 10h00\n   - **Description** : Atelier créatif\n\n3. **Ateliers Créatifs- \"La Fête au Jardin\" et \"Custom post\"**\n   - **Catégorie** : loisir\n   - **Ville** : Paris\n   - **Date** : 28 juin 2026 à 15h00\n   - **Description** : Des ateliers créatifs pour les young et old kids 🌿",
+    "returncode": 0
+  },
+  {
+    "id": 20,
+    "question": "événement sport et loisirs dans le Val-d'Oise",
+    "answer": "1. **P'tits sportifs: Équilibre en action!**\n   - **Catégorie** : loisir\n   - **Ville** : Attainville\n   - **Date** : 14 mars 2026\n   - **Description** : Atelier parent/enfant pour les 2-6 ans : mini parcours et jeux d'équilibre.\n\n2. **Goûter jeux de société**\n   - **Catégorie** : famille\n   - **Ville** : Éragny\n   - **Date** : 28 août 2026\n   - **Description** : Profitez d'un goûter ludique avec la ludothèque La Boîte à jeux à la Maison Bernardin de Saint-Pierre ! Découvrez une sélection de jeux en plein air autour d'une collation gourmande.",
+    "returncode": 0
+  },
+  {
+    "id": 21,
+    "question": "salon à Paris ce mois-ci",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 22,
+    "question": "forum ou événement professionnel en Île-de-France",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 23,
+    "question": "salon famille enfants à Paris",
+    "answer": "1. **Titre :** atelier parents enfants pro\n   **Catégorie :** famille\n   **Ville :** Paris\n   **Date :** 16 mars 2026\n   **Description :** la semaine de la petite enfance\n\n2. **Titre :** Accueil Parents- Enfants\n   **Catégorie :** famille\n   **Ville :** Paris\n   **Date :** 19 mars 2026\n   **Description :** Accueil Parents-Enfants",
+    "returncode": 0
+  },
+  {
+    "id": 24,
+    "question": "événement grand public en Seine-et-Marne",
+    "answer": "1. **Titre :** Verticale de poche, par la compagnie Retouramont\n   **Catégorie :** culture\n   **Ville :** Champs-sur-Marne\n   **Date :** 29 août 2026\n   **Description :** Spectacle de danse verticale dans le parc du château de Champs-sur-Marne\n\n2. **Titre :** We Cirk ! Festival cirque en Seine-et-Marne\n   **Catégorie :** culture\n   **Ville :** Quincy-Voisins\n   **Date :** 27 juin 2026\n   **Description :** Des spectacles",
+    "returncode": 0
+  },
+  {
+    "id": 25,
+    "question": "rencontre ou salon culturel en Île-de-France",
+    "answer": "1. **Titre :** Journée Porte Ouverte\n   **Catégorie :** culture\n   **Ville :** Boulogne-Billancourt\n   **Date :** 2026-06-28T10:00:00.000+02:00\n   **Description :** Venez partager notre petit paradis\n\n2. **Titre :** Dessin & poésie au jardin\n   **Catégorie :** culture\n   **Ville :** Paris\n   **Date :** 2026-06-29T08:00:00.000+02:00\n   **Description :** Jardin ouvert aux peintres et aux poètes d'un jour",
+    "returncode": 0
+  },
+  {
+    "id": 26,
+    "question": "vol spatial sur Mars",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 27,
+    "question": "match de football de Ligue 1",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 28,
+    "question": "restaurant italien à Paris",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 29,
+    "question": "météo demain à Lyon",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  },
+  {
+    "id": 30,
+    "question": "recette de cuisine facile",
+    "answer": "Je ne sais pas.",
+    "returncode": 0
+  }
+]

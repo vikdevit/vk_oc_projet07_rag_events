@@ -1,0 +1,425 @@
+[
+  {
+    "id": 1,
+    "expected_answer": "L'utilisateur cherche une activité enfant à Paris. Les événements pertinents sont des ateliers pour enfants ou familles comme Atelier jeux enfants à partir de 2 mois et Atelier éveil et jeux enfants à partir de 3 mois.",
+    "expected": {
+      "type": "famille",
+      "cities": ["Paris"],
+      "keywords": [
+        "enfant",
+        "atelier",
+        "jeux",
+        "éveil"
+      ],
+      "events": [
+        "Atelier jeux enfants à partir de 2 mois",
+        "Atelier éveil et jeux enfants à partir de 3 mois"
+      ],
+      "must_not_contain": [
+        "Mars",
+        "football"
+      ]
+    }
+  },
+
+  {
+    "id": 2,
+    "expected_answer": "Un atelier parent enfant est disponible à Garches dans les Hauts-de-Seine. Il s'agit d'un événement famille autour des enfants et des parents.",
+    "expected": {
+      "type": "famille",
+      "cities": [
+        "Garches"
+      ],
+      "keywords": [
+        "parent",
+        "enfant",
+        "famille"
+      ],
+      "events": [
+        "Accueil Libre Enfants Parents"
+      ],
+      "must_not_contain": []
+    }
+  },
+
+  {
+    "id": 3,
+    "expected_answer": "Les activités petite enfance proposées concernent des ateliers parents enfants et des activités d'éveil en Île-de-France.",
+    "expected": {
+      "type": "famille",
+      "cities": [
+        "Paris",
+        "Verrières-le-Buisson",
+        "Pontoise"
+      ],
+      "keywords": [
+        "petite enfance",
+        "atelier",
+        "enfant"
+      ],
+      "events": [
+        "Atelier Premier Pas",
+        "atelier parents enfants pro"
+      ],
+      "must_not_contain": []
+    }
+  },
+
+  {
+    "id": 4,
+    "expected_answer": "Une sortie famille près de Versailles correspond à des événements de loisir ou patrimoine comme une visite au château ou une activité familiale.",
+    "expected": {
+      "type": "famille",
+      "cities": [
+        "Versailles",
+        "Médan"
+      ],
+      "keywords": [
+        "famille",
+        "château",
+        "patrimoine"
+      ],
+      "events": [
+        "Fêtez l'art à Versailles",
+        "Visite commentée"
+      ],
+      "must_not_contain": []
+    }
+  },
+
+  {
+    "id": 5,
+    "expected_answer": "Aucun événement famille pertinent n'est disponible à Saint-Denis.",
+    "expected": {
+      "type": "famille",
+      "cities": [
+        "Saint-Denis"
+      ],
+      "keywords": [
+        "famille"
+      ],
+      "events": [],
+      "must_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  },
+
+
+  {
+    "id": 6,
+    "expected_answer": "Un événement culturel correspond à une activité artistique, exposition ou spectacle.",
+    "expected": {
+      "type": "culture",
+      "keywords": [
+        "culture",
+        "exposition",
+        "spectacle"
+      ],
+      "events": [],
+      "must_not_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  },
+
+
+  {
+    "id": 7,
+    "expected_answer": "Une activité culturelle en Seine-Saint-Denis doit proposer un événement de type culture dans ce département.",
+    "expected": {
+      "type": "culture",
+      "keywords": [
+        "culture",
+        "Seine-Saint-Denis"
+      ],
+      "events": [],
+      "must_not_contain": []
+    }
+  },
+
+
+  {
+    "id": 8,
+    "expected_answer": "Une exposition à Paris correspond à un événement culturel.",
+    "expected": {
+      "type": "culture",
+      "cities": [
+        "Paris"
+      ],
+      "keywords": [
+        "exposition"
+      ]
+    }
+  },
+
+
+  {
+    "id": 9,
+    "expected_answer": "Une activité artistique dans le Val-de-Marne correspond à un événement culturel ou loisir.",
+    "expected": {
+      "keywords": [
+        "artistique",
+        "Val-de-Marne"
+      ]
+    }
+  },
+
+
+  {
+    "id": 10,
+    "expected_answer": "Un événement musique ou culture correspond à une activité culturelle.",
+    "expected": {
+      "keywords": [
+        "musique",
+        "culture"
+      ]
+    }
+  },
+
+
+  {
+    "id": 11,
+    "expected_answer": "Une visite patrimoine à Paris correspond à une activité historique ou culturelle.",
+    "expected": {
+      "keywords": [
+        "patrimoine",
+        "visite",
+        "historique"
+      ],
+      "cities": [
+        "Paris"
+      ]
+    }
+  },
+
+
+  {
+    "id": 12,
+    "expected_answer": "Une découverte de monument historique correspond à une activité patrimoine.",
+    "expected": {
+      "keywords": [
+        "monument",
+        "historique"
+      ]
+    }
+  },
+
+
+  {
+    "id": 13,
+    "expected_answer": "Une activité patrimoine dans les Yvelines concerne une visite ou un lieu historique.",
+    "expected": {
+      "keywords": [
+        "patrimoine",
+        "Yvelines"
+      ]
+    }
+  },
+
+
+  {
+    "id": 14,
+    "expected_answer": "Une visite historique près de Versailles correspond à un événement patrimoine.",
+    "expected": {
+      "cities": [
+        "Versailles"
+      ],
+      "keywords": [
+        "historique",
+        "patrimoine"
+      ]
+    }
+  },
+
+
+  {
+    "id": 15,
+    "expected_answer": "Un événement patrimoine en Essonne concerne une visite culturelle historique.",
+    "expected": {
+      "keywords": [
+        "patrimoine",
+        "Essonne"
+      ]
+    }
+  },
+
+
+  {
+    "id": 16,
+    "expected_answer": "Une activité sportive en famille correspond à un événement loisir ou sport.",
+    "expected": {
+      "keywords": [
+        "sport",
+        "famille"
+      ]
+    }
+  },
+
+
+  {
+    "id": 17,
+    "expected_answer": "Un loisir sportif à Paris correspond à une activité sportive.",
+    "expected": {
+      "cities": [
+        "Paris"
+      ],
+      "keywords": [
+        "sport",
+        "loisir"
+      ]
+    }
+  },
+
+
+  {
+    "id": 18,
+    "expected_answer": "Une activité plein air dans les Hauts-de-Seine correspond à un loisir extérieur.",
+    "expected": {
+      "keywords": [
+        "plein air",
+        "Hauts-de-Seine"
+      ]
+    }
+  },
+
+
+  {
+    "id": 19,
+    "expected_answer": "Un atelier loisir pour enfants correspond à une activité familiale.",
+    "expected": {
+      "keywords": [
+        "loisir",
+        "enfant"
+      ]
+    }
+  },
+
+
+  {
+    "id": 20,
+    "expected_answer": "Un événement sport dans le Val-d'Oise correspond à une activité sportive.",
+    "expected": {
+      "keywords": [
+        "sport",
+        "Val-d'Oise"
+      ]
+    }
+  },
+
+
+  {
+    "id": 21,
+    "expected_answer": "Un salon à Paris correspond à un événement public.",
+    "expected": {
+      "keywords": [
+        "salon",
+        "Paris"
+      ]
+    }
+  },
+
+
+  {
+    "id": 22,
+    "expected_answer": "Un forum professionnel correspond à un événement professionnel.",
+    "expected": {
+      "keywords": [
+        "forum",
+        "professionnel"
+      ]
+    }
+  },
+
+
+  {
+    "id": 23,
+    "expected_answer": "Un salon famille enfants correspond à un événement familial.",
+    "expected": {
+      "keywords": [
+        "salon",
+        "famille",
+        "enfant"
+      ]
+    }
+  },
+
+
+  {
+    "id": 24,
+    "expected_answer": "Un événement grand public en Seine-et-Marne correspond à un événement local.",
+    "expected": {
+      "keywords": [
+        "événement",
+        "Seine-et-Marne"
+      ]
+    }
+  },
+
+
+  {
+    "id": 25,
+    "expected_answer": "Une rencontre culturelle ou un salon culturel correspond à un événement culture.",
+    "expected": {
+      "keywords": [
+        "salon",
+        "culture"
+      ]
+    }
+  },
+
+
+  {
+    "id": 26,
+    "expected_answer": "La question concerne l'espace et Mars, ce n'est pas un événement.",
+    "expected": {
+      "must_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  },
+
+
+  {
+    "id": 27,
+    "expected_answer": "La question concerne le football et pas un événement présent dans la base.",
+    "expected": {
+      "must_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  },
+
+
+  {
+    "id": 28,
+    "expected_answer": "La question concerne un restaurant et pas un événement.",
+    "expected": {
+      "must_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  },
+
+
+  {
+    "id": 29,
+    "expected_answer": "La question concerne la météo et pas un événement.",
+    "expected": {
+      "must_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  },
+
+
+  {
+    "id": 30,
+    "expected_answer": "La question concerne une recette de cuisine et pas un événement.",
+    "expected": {
+      "must_contain": [
+        "Je ne sais pas"
+      ]
+    }
+  }
+]
