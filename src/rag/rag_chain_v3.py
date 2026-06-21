@@ -19,7 +19,7 @@ answer
 from src.rag.retriever_v3 import retrieve
 from src.rag.reranker_v5 import rerank
 from src.rag.prompt_builder_v3 import build_prompt
-from src.rag.mistral_generator_v2 import generate_answer
+from src.rag.mistral_generator_v3 import generate_answer
 
 
 
