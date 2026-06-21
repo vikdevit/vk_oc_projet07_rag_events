@@ -8,9 +8,7 @@ from api.schemas import (
     RebuildResponse
 )
 
-
 from src.rag.rag_chain_v3 import rag_answer
-
 
 
 router = APIRouter()
@@ -19,7 +17,8 @@ router = APIRouter()
 
 @router.get(
     "/health",
-    response_model=HealthResponse
+    response_model=HealthResponse,
+    tags=["system"]
 )
 def health():
 
@@ -28,24 +27,37 @@ def health():
         "service": "rag-api"
     }
 
-@router.post("/ask")
-def ask(request: AskRequest):
 
-    if not request.question.strip():
+
+@router.post(
+    "/ask",
+    response_model=AskResponse,
+    tags=["rag"]
+)
+def ask(
+    request: AskRequest
+):
+
+    question = request.question.strip()
+
+
+    if not question:
 
         raise HTTPException(
             status_code=400,
             detail="Question cannot be empty"
         )
 
+
     try:
 
         answer = rag_answer(
-            request.question
+            question
         )
 
+
         return {
-            "question": request.question,
+            "question": question,
             "answer": answer
         }
 
@@ -59,10 +71,11 @@ def ask(request: AskRequest):
 
 
 
-
-
-
-@router.post("/rebuild")
+@router.post(
+    "/rebuild",
+    response_model=RebuildResponse,
+    tags=["admin"]
+)
 def rebuild_index():
 
     try:
@@ -75,9 +88,11 @@ def rebuild_index():
             check=True
         )
 
+
         return {
             "status":"success",
-            "message":"Vector database rebuilt"
+            "message":
+            "Vector database rebuilt"
         }
 
 

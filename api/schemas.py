@@ -6,12 +6,13 @@ class AskRequest(BaseModel):
     Question envoyée au RAG
     """
 
-    question: str = Field(
-        ...,
-        min_length=3,
-        description="Question utilisateur"
-    )
+#    question: str = Field(
+#        ...,
+#        min_length=3,
+#        description="Question utilisateur"
+#    )
 
+    question: str
 
 class AskResponse(BaseModel):
     """
@@ -27,6 +28,7 @@ class AskResponse(BaseModel):
 class HealthResponse(BaseModel):
 
     status: str
+    service: str
 
 
 
