@@ -27,7 +27,19 @@ def health():
         "service": "rag-api"
     }
 
+@router.get(
+        "/metadata",
+        tags=["system"]
+)
+def metadata():
 
+    return {
+            "project": "RAG Events Viken OC",
+            "version": "1.0",
+            "vector_store": "FAISS",
+            "embedding_model": "paraphrase-multilingual-mpnet-base-v2",
+            "llm": "Mistral"
+    }
 
 @router.post(
     "/ask",
@@ -80,14 +92,15 @@ def rebuild_index():
 
     try:
 
+        import sys
+
         subprocess.run(
             [
-                "python",
+                sys.executable,
                 "src/vectorstore/faiss_semantic_index_v5.py"
             ],
             check=True
         )
-
 
         return {
             "status":"success",
