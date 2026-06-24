@@ -92,14 +92,15 @@ def rebuild_index():
 
     try:
 
+        import sys
+
         subprocess.run(
             [
-                "python",
+                sys.executable,
                 "src/vectorstore/faiss_semantic_index_v5.py"
             ],
             check=True
         )
-
 
         return {
             "status":"success",
