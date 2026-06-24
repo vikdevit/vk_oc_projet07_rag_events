@@ -27,7 +27,19 @@ def health():
         "service": "rag-api"
     }
 
+@router.get(
+        "/metadata",
+        tags=["system"]
+)
+def metadata():
 
+    return {
+            "project": "RAG Events Viken OC",
+            "version": "1.0",
+            "vector_store": "FAISS",
+            "embedding_model": "paraphrase-multilingual-mpnet-base-v2",
+            "llm": "Mistral"
+    }
 
 @router.post(
     "/ask",
