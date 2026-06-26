@@ -4,6 +4,13 @@ import numpy as np
 
 from sentence_transformers import SentenceTransformer
 
+import json
+
+with open(
+    "data/processed/semantic_chunks.json",
+    encoding="utf-8"
+) as f:
+    chunks = json.load(f)
 
 INDEX="data/vectorstore/semantic_events.index"
 
@@ -61,8 +68,16 @@ def search(query):
         print("TYPE:",doc["type"])
         print("CITY:",doc["city"])
         print("DATE:",doc["start_date"])
-        print("DESC:",doc["description"][:200])
+        #print("DESC:",doc["description"][:200])
+        #print(
+        #    "DESC:",
+        #    chunks[idx]["text"][:300]
+        #)
 
+        print(
+            "DESC:",
+            chunks[idx]["metadata"].get("description") or ""
+        )
 
 if __name__=="__main__":
 

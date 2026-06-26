@@ -4,7 +4,8 @@ from pathlib import Path
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-INPUT = "data/raw/ingestion_events.json"
+#INPUT = "data/raw/ingestion_events.json"
+INPUT = "data/processed/documents.json"
 OUTPUT = "data/processed/semantic_chunks.json"
 
 
@@ -12,77 +13,53 @@ class EventSemanticChunker(
     RecursiveCharacterTextSplitter
 ):
 
-    def split_event(self, event):
+    def split_document(self, document):
 
-        title = event.get("title","")
-        event_type = event.get("type","")
-        city = event.get("city","")
-        department = event.get("department","")
-
-        date = (
-            event.get("start_date")
-            or event.get("date")
-            or ""
+        metadata = document.get(
+            "metadata",
+            {}
         )
 
-        description = event.get(
-            "description",
-            ""
+        content = document.get(
+        "page_content",
+        ""
         )
 
+        description = ""
 
-        text = f"""
-Titre: {title}
+        if "Description:" in content:
+            description = content.split(
+                "Description:",
+                1
+            )[1].strip()
 
-Catégorie: {event_type}
 
-Ville: {city}
-
-Département: {department}
-
-Date: {date}
-
-Description:
-{description}
-""".strip()
+        metadata["description"] = description
 
 
         return [
             {
-                "chunk_id": event["id"],
 
-                "text": text,
+                "chunk_id":
+                    document["id"],
 
-                "metadata": {
+                "text":
+                    content,
 
-                    "title": title,
+                "metadata":
+                    metadata
 
-                    "type": event_type,
-
-                    "city": city,
-
-                    "department": department,
-
-                    "start_date": date,
-
-                    "description": description
-
-                }
             }
         ]
 
-
-
 def main():
-
 
     with open(
         INPUT,
         encoding="utf-8"
     ) as f:
 
-        events = json.load(f)
-
+        documents = json.load(f)
 
 
     chunker = EventSemanticChunker(
@@ -91,15 +68,14 @@ def main():
     )
 
 
-    chunks=[]
+    chunks = []
 
 
-    for event in events:
+    for document in documents:
 
         chunks.extend(
-            chunker.split_event(event)
+            chunker.split_document(document)
         )
-
 
 
     Path(
@@ -124,12 +100,12 @@ def main():
 
 
     print("===================")
-    print("DOCUMENTS:",len(events))
-    print("CHUNKS:",len(chunks))
-    print("SAVED:",OUTPUT)
+    print("DOCUMENTS :", len(documents))
+    print("CHUNKS    :", len(chunks))
+    print("SAVED     :", OUTPUT)
     print("===================")
 
 
+if __name__ == "__main__":
 
-if __name__=="__main__":
     main()
