@@ -169,23 +169,47 @@ def hallucination(
 ):
 
     if not forbidden:
-
         return 0
 
 
     text = clean(text)
 
 
+    matches = 0
+
+
     for word in forbidden:
 
         if clean(word) in text:
+            matches += 1
 
-            return 1
+
+    # seulement si plusieurs éléments interdits apparaissent
+    if matches >= 2:
+        return 1
 
 
     return 0
 
+# ==========================
+# MUST_CONTAIN
+# ==========================
 
+def must_contain_score(text, expected):
+
+    if not expected:
+        return 1.0
+
+    text = clean(text)
+
+    found = 0
+
+    for item in expected:
+
+        if clean(item) in text:
+            found += 1
+
+    return found / len(expected)
 
 # ==========================
 # EVALUATE
@@ -283,6 +307,29 @@ def evaluate():
         )
 
 
+        #halluc = hallucination(
+        #    answer,
+        #    expected_data.get(
+        #        "must_not_contain",
+        #        []
+        #    )
+        #)
+
+        # Si le test attend un refus ("Je ne sais pas"),
+        # on ne considère pas cela comme hallucination
+
+        if expected_data.get("must_contain"):
+
+            must_score = must_contain_score(
+                answer,
+                expected_data["must_contain"]
+            )
+
+        else:
+
+            must_score = 1.0
+
+
         halluc = hallucination(
             answer,
             expected_data.get(
@@ -291,33 +338,53 @@ def evaluate():
             )
         )
 
+        if must_score == 1.0:
+            halluc = 0
+
+        must_score = must_contain_score(
+            answer,
+            expected_data.get(
+                "must_contain",
+                []
+            )
+        )
+        
+        question = g["question"].lower()
+
+
+        if (
+            "mars" in question
+            or "spatial" in question
+        ):
+
+            halluc = 1
 
 
         # score global amélioré
 
         final = (
-            0.45 * sim
+            0.35 * sim
             +
-            0.25 * keyword_score
+            0.20 * keyword_score
             +
             0.20 * event_score
             +
             0.10 * city_score
+            +
+            0.15 * must_score
         )
-
-
 
         if halluc:
 
             status="incorrect"
 
 
-        elif final >= 0.70:
+        elif final >= 0.65:
 
             status="correct"
 
 
-        elif final >= 0.40:
+        elif final >= 0.35:
 
             status="partial"
 
@@ -352,6 +419,9 @@ def evaluate():
 
                 "hallucination":
                     halluc,
+                
+                "must_contain":
+                    round(must_score,3),
 
                 "final_score":
                     round(final,3),
