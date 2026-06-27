@@ -71,13 +71,13 @@ festival de musique à Paris ?
                                │
                                ▼
                 Construction des documents RAG
-                     (script document_builder_v2.py)
+                (script document_builder_v2.py)
                                │
                                ▼
                        Chunking Sémantique
                                │
                                ▼
-       Embeddings multilingues (SentenceTransformers)
+         Embeddings multilingues (SentenceTransformers)
                                │
                                ▼
                           Index FAISS
@@ -87,31 +87,31 @@ festival de musique à Paris ?
                      Question utilisateur
                                │
                                ▼
-                           FastAPI
+                            FastAPI
                                │
                                ▼
-                        Prompt Builder
+                         Prompt Builder
                                │
                                ▼
-                          Retriever
+                           Retriever
                                │
                                ▼
-                           Reranker
+                            Reranker
                                │
                                ▼
-                      Contexte pertinent
+                       Contexte pertinent
                                │
                                ▼
                      Chaîne RAG (LangChain)
                                │
                                ▼
-                 LLM Mistral (génération)
+                    LLM Mistral (génération)
                                │
                                ▼
-                    Réponse utilisateur
+                       Réponse utilisateur
                                │
                                ▼
-                    API Dockerisée
+                        API Dockerisée
 ```
 
 ---
@@ -130,11 +130,11 @@ festival de musique à Paris ?
 
 Le NLP est utilisé à plusieurs niveaux :
 
-- nettoyage et normalisation des données ;
-- représentation sémantique des documents (embeddings) ;
-- recherche sémantique ;
-- reranking ;
-- génération de la réponse avec le LLM.
+- chunking sémantique avec RecursiveCharacterTextSplitter de langchain_text_splitters ;
+- représentation sémantique des documents (embeddings) avec paraphrase-multilingual-mpnet-base-v2 de SentenceTransformer ;
+- recherche sémantique avec paraphrase-multilingual-mpnet-base-v2 de SentenceTransformer  ;
+- reranking avec cross-encoder/ms-marco-MiniLM-L-6-v2 de SentenceTransformer ;
+- construction du prompt et génération de la réponse avec le LLM utilisant via les librairies créées la recherche sémantique et le reranking
 
 ## Base vectorielle
 
@@ -142,7 +142,8 @@ Le NLP est utilisé à plusieurs niveaux :
 
 ## Modèle de génération
 
-- Mistral
+- Mistral avec mistral-small-latest et Langchain avec  HumanMessage 
+
 
 ## API
 
@@ -167,7 +168,7 @@ docs/
 scripts/
 src/
 tests/
-
+environment.yml
 Dockerfile
 requirements.txt
 README.md
@@ -178,38 +179,46 @@ Description des principaux dossiers :
 | Dossier | Description |
 |----------|-------------|
 | api | API FastAPI |
-| src | Pipeline RAG |
+| src | Preprocessing et Pipeline RAG |
 | tests | Tests unitaires et d'intégration |
-| data | Données, documents et index FAISS |
+| data | Données, documents, jeu de test annoté et index FAISS |
 | docs | Documentation |
 
 ---
 
-# Installation
+# Création d'un environnement virtuel conda pour le développement avant conteneurisation de l'API du RAG
+ 
+Le projet utilise un environnement Conda nommé `vk-oc-rag-events` défini dans le fichier `environment.yml`.
 
-Créer un environnement virtuel
+## Prérequis
 
-```bash
-python -m venv env
-```
+Installer [Conda](https://docs.conda.io/) (Miniconda ou Anaconda).
 
-Activation
-
-Linux
+Vérifier l'installation :
 
 ```bash
-source env/bin/activate
+conda --version
 ```
 
-Installer les dépendances
+Puis depuis la racine du projet, lancer:
 
 ```bash
-pip install -r requirements.txt
+conda env create -f environment.yml
 ```
 
----
+## Activation
 
-# Pipeline de préparation
+```bash
+conda activate vk-oc-rag-events
+```
+
+## Désactivation
+
+```bash
+conda deactivate 
+```
+
+# Pipeline de construction du RAG
 
 ## 1. Collecte des données
 
@@ -305,7 +314,7 @@ http://localhost:8000/docs
 
 ---
 
-# Endpoints
+# Endpoints de l'API
 
 ## Vérification du service
 
@@ -363,15 +372,18 @@ Cette route reconstruit automatiquement :
 
 ---
 
-# Docker
+# Conteneurisation de l'API du RAG avec Docker
 
-Construction de l'image
+## Construction de l'image
+
+Vérifier que le Dockerfile se situe à la racine du projet, puis lancer:
 
 ```bash
 docker build -t rag-events-api .
 ```
+Remarque : l'image construite utilise un fichier de dépendances requirements.txt correspondant à une version allégée des dépendances utilisées par l'environnement virtuel conda.
 
-Lancement
+## Création et lancement du conteneur avec l'API du RAG
 
 ```bash
 docker run --rm \
@@ -380,6 +392,8 @@ docker run --rm \
 -p 8000:8000 \
 rag-events-api
 ```
+
+Remarque : la ligne -v ~/.cache/huggingface:/root/.cache/huggingface permet le montage d'un volume entre votre machine et le conteneur permettant de garder les modèles sentence-transformers sur votremachine pour un démarrage plus rapide du conteneur.
 
 ---
 
@@ -391,12 +405,16 @@ Le projet comprend :
 - tests d'intégration ;
 - tests de la recherche FAISS ;
 - tests du pipeline RAG ;
-- tests API FastAPI.
+- test de l'API FastAPI du RAG.
 
-Exécution
+Exécution de tous les tests avec rapport de couverture :
 
 ```bash
-pytest
+PYTHONPATH=. pytest tests/ \
+  --cov=src \
+  --cov-report=term-missing \
+  --cov-report=html \
+  -v
 ```
 
 Résultat obtenu
@@ -410,11 +428,14 @@ Résultat obtenu
 
 # Évaluation du système RAG
 
-Le système est évalué sur un jeu de **30 questions annotées**.
+Le système est évalué sur un jeu de **30 questions annotées** disponibles sous :
+```bash
+vk_oc_projet07_rag_events/data/test_dataset/questions.json
+```
 
 Les métriques utilisées sont :
 
-- similarité sémantique ;
+- similarité sémantique entre la réponse générée et la référence (calculée à partir des embeddings et de la similarité cosinus) ; 
 - couverture des informations attendues ;
 - détection d'hallucinations ;
 - score global pondéré.
