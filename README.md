@@ -1,5 +1,5 @@
 # Assistant intelligent de recommandation d'événements culturels
-### Projet 7 — Parcours AI Engineer OpenClassrooms
+### Projet 7 réalisé dans le cadre du parcours AI Engineer OpenClassrooms
 
 ## Présentation
 
@@ -489,5 +489,5 @@ Les principales évolutions envisagées sont :
 
 # Auteur
 Viken KHATCHERIAN
-Projet réalisé dans le cadre du **Projet 7 du parcours AI Engineer OpenClassrooms**.
+
 
