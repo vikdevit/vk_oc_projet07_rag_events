@@ -84,14 +84,14 @@ festival de musique à Paris ?
                                │
 ───────────────────────────────                
 |           ________________________________________
-|
+▼
 |                     Question utilisateur
 |                              │
 |                              ▼
 |                           FastAPI
 |                              │
-|                              ▼
-────────────────────────── Retriever
+▼                              ▼
+─────────────────────────⮕ Retriever
                                │
                                ▼
                  Reranker (pertinence contexte)
