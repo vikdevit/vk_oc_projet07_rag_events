@@ -82,15 +82,16 @@ festival de musique à Paris ?
                                ▼
                           Index FAISS
                                │
-──────────────────────────────────────────────────────────────
-
-                     Question utilisateur
-                               │
-                               ▼
-                            FastAPI
-                               │
-                               ▼
-                           Retriever
+───────────────────────────────                
+|           ________________________________________
+|
+|                     Question utilisateur
+|                              │
+|                              ▼
+|                           FastAPI
+|                              │
+|                              ▼
+────────────────────────── Retriever
                                │
                                ▼
                  Reranker (pertinence contexte)
