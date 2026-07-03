@@ -90,22 +90,16 @@ festival de musique à Paris ?
                             FastAPI
                                │
                                ▼
-                         Prompt Builder
-                               │
-                               ▼
                            Retriever
                                │
                                ▼
-                            Reranker
+                 Reranker (pertinence contexte)
                                │
                                ▼
-                       Contexte pertinent
+                         Prompt builder
                                │
                                ▼
-                     Chaîne RAG (LangChain)
-                               │
-                               ▼
-                    LLM Mistral (génération)
+                     LLM Mistral (génération)
                                │
                                ▼
                        Réponse utilisateur
@@ -113,6 +107,7 @@ festival de musique à Paris ?
                                ▼
                         API Dockerisée
 ```
+Remarque : les étapes retriever, reranker, prompt builder et réponse générée par le LLM sont orchestrées par un script (src/rag/rag_chain_v3.py) également utilisé par l'API exposant les services du RAG.
 
 ---
 
